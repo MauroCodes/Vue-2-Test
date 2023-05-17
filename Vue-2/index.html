@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicas En Vuejs</title>
+</head>
+
+<body>
+    <style>
+        .colorRojo {
+            color: red
+        }
+
+        .colorVerde {
+            color: green
+        }
+    </style>
+    <h1 id="titular">Aprendiendo Vue.js</h1>
+    <div id="practicas">
+        <p>{{despedida}}</p>
+        <p>{{texto}}</p>
+        <h2>Directivas De Vue</h2>
+        <h3>V-show</h3>
+        <p v-show="edad > 20">Texto Visible Si activo=true</p>
+        <h3>V-if : Directiva Condicional</h3>
+        <p v-if="activo === true">Si Es Activo </p>
+        <p v-else="activo != true">No Es Activo</p>
+        <h3>V-FOR Directiva Para Sentencias Repetitivas</h3>
+        <ul>
+            <li v-for="pareja in sujeto" :key="pareja">Parejas De Harley : {{pareja}}</li>
+        </ul>
+        <h3>V-HTML : Directiva Para Pintar HTMLS </h3>
+        <p v-html="blog"></p>
+        <h3>Binding :</h3>
+        <p>
+            <input type="text" v-model="texto">
+        </p>
+        <h3>Eventos Y Funciones </h3>
+        <button @click="odio"> Odiar</button>
+        <button @click="cc">Color Rojo De Fondo</button>
+        <p>
+            <input type="text" v-model="texto2">
+        </p>
+        <button @click="bg(texto2)">Quiero Este Color</button>
+        <br><br>
+        <input type="text" v-model="nombre">
+        <button @click="verificarname">Verificar Nombre</button>
+        <p id="mensaje">{{mensaje}}</p>
+        <p></p>
+        <button @click="buscarAgente">Buscar Agente</button>
+        <input type="text" v-model="agente">
+        <p id="mensaje2">{{mensaje2}}</p>
+        <p>
+
+
+        </p>
+        <h3>Binding De Clases</h3>
+        <label for="nombres" :class="{colorVerde:text_success, colorRojo:text_error}">
+            Nombre:
+        </label>
+        <input type="text" v-model="nombre">
+        <button @click="cotest">Comprobar</button>
+        <br>
+        <button @click="redirigir">Tremenda Rola</button>
+        <br>
+        <h3>Binding Styles</h3>
+        <input type="text" v-model="sizetxt">
+        <button @click="cambiarTamaño">Cambiar Tamaño Del Titulo</button>
+    </div>
+
+
+
+    <!-- Vue Y Scripts-->
+    <script type="text/javascript" src="./vue.js"></script>
+    <script src="./practica.js"></script>
+
+</body>
+
+</html>
