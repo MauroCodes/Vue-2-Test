@@ -26,7 +26,7 @@ new Vue({
     },
     methods: {
         odio: function () {
-            console.log("Siento Odio")
+            console.log("Take It Easy")
         },
         cc: function () {
             document.body.style.backgroundColor = "red";
